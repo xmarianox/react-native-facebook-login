@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import {
   View,
+  ViewPropTypes,
   StyleSheet,
   NativeModules,
   NativeMethodsMixin,
@@ -89,6 +90,9 @@ class FBLogin extends Component {
     return <RCTMFBLogin {...this.props} style={[styles.base, this.props.style]} />
   }
 }
+
+
+const viewPropTypes = ViewPropTypes || View.propTypes;
 
 FBLogin.propTypes = {
   style: ViewPropTypes.style,
